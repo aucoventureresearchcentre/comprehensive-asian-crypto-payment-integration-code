@@ -1,0 +1,161 @@
+config.yaml:
+  database:
+    driver: "postgres"
+    host: "localhost"
+    port: 5432
+    name: "asian_crypto_payment"
+    user: "payment_user"
+    password: "your_secure_password"
+    sslmode: "disable"
+  
+  redis:
+    host: "localhost"
+    port: 6379
+    password: ""
+    db: 0
+  
+  blockchain:
+    bitcoin:
+      network: "mainnet"
+      rpc_url: "http://localhost:8332"
+      rpc_user: "your_bitcoin_rpc_user"
+      rpc_password: "your_bitcoin_rpc_password"
+    ethereum:
+      network: "mainnet"
+      rpc_url: "https://mainnet.infura.io/v3/your_infura_project_id"
+  
+  exchange:
+    provider: "coingecko"
+    api_key: "your_api_key"
+    update_interval: 60
+  
+  security:
+    encryption_key: "your_secure_encryption_key"
+    jwt_secret: "your_secure_jwt_secret"
+    token_expiry: 86400
+  
+  payment_platforms:
+    # Malaysia
+    malaysia_fpx:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.example.com"
+      callback_url: "https://your-domain.com/callback/malaysia/fpx"
+      redirect_url: "https://your-domain.com/redirect/malaysia/fpx"
+      test_mode: false
+    
+    malaysia_grabpay:
+      client_id: "your_client_id"
+      client_secret: "your_client_secret"
+      merchant_id: "your_merchant_id"
+      api_endpoint: "https://partner-api.grab.com"
+      callback_url: "https://your-domain.com/callback/malaysia/grabpay"
+      redirect_url: "https://your-domain.com/redirect/malaysia/grabpay"
+      test_mode: false
+    
+    # Singapore
+    singapore_paynow:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.example.com"
+      callback_url: "https://your-domain.com/callback/singapore/paynow"
+      redirect_url: "https://your-domain.com/redirect/singapore/paynow"
+      test_mode: false
+    
+    singapore_nets:
+      merchant_id: "your_merchant_id"
+      terminal_id: "your_terminal_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.nets.com.sg"
+      callback_url: "https://your-domain.com/callback/singapore/nets"
+      redirect_url: "https://your-domain.com/redirect/singapore/nets"
+      test_mode: false
+    
+    # Indonesia
+    indonesia_gopay:
+      client_id: "your_client_id"
+      client_secret: "your_client_secret"
+      merchant_id: "your_merchant_id"
+      api_endpoint: "https://api.midtrans.com"
+      callback_url: "https://your-domain.com/callback/indonesia/gopay"
+      redirect_url: "https://your-domain.com/redirect/indonesia/gopay"
+      test_mode: false
+    
+    indonesia_ovo:
+      app_id: "your_app_id"
+      app_key: "your_app_key"
+      merchant_id: "your_merchant_id"
+      api_endpoint: "https://api.ovo.id"
+      callback_url: "https://your-domain.com/callback/indonesia/ovo"
+      redirect_url: "https://your-domain.com/redirect/indonesia/ovo"
+      test_mode: false
+    
+    # Thailand
+    thailand_promptpay:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.scb.co.th"
+      callback_url: "https://your-domain.com/callback/thailand/promptpay"
+      redirect_url: "https://your-domain.com/redirect/thailand/promptpay"
+      test_mode: false
+    
+    thailand_truemoney:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.truemoney.com"
+      callback_url: "https://your-domain.com/callback/thailand/truemoney"
+      redirect_url: "https://your-domain.com/redirect/thailand/truemoney"
+      test_mode: false
+    
+    # Vietnam
+    vietnam_momo:
+      partner_code: "your_partner_code"
+      access_key: "your_access_key"
+      secret_key: "your_secret_key"
+      api_endpoint: "https://payment.momo.vn"
+      callback_url: "https://your-domain.com/callback/vietnam/momo"
+      redirect_url: "https://your-domain.com/redirect/vietnam/momo"
+      test_mode: false
+    
+    vietnam_vnpay:
+      merchant_id: "your_merchant_id"
+      secure_hash: "your_secure_hash"
+      api_endpoint: "https://vnpayment.vn"
+      callback_url: "https://your-domain.com/callback/vietnam/vnpay"
+      redirect_url: "https://your-domain.com/redirect/vietnam/vnpay"
+      test_mode: false
+    
+    # Cambodia
+    cambodia_wing:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.wingmoney.com"
+      callback_url: "https://your-domain.com/callback/cambodia/wing"
+      redirect_url: "https://your-domain.com/redirect/cambodia/wing"
+      test_mode: false
+    
+    cambodia_aba:
+      merchant_id: "your_merchant_id"
+      merchant_api_key: "your_merchant_api_key"
+      merchant_secret: "your_merchant_secret"
+      api_endpoint: "https://checkout.payway.com.kh"
+      callback_url: "https://your-domain.com/callback/cambodia/aba"
+      redirect_url: "https://your-domain.com/redirect/cambodia/aba"
+      test_mode: false
+    
+    # Laos
+    laos_umoney:
+      merchant_id: "your_merchant_id"
+      merchant_key: "your_merchant_key"
+      api_endpoint: "https://api.umoney.la"
+      callback_url: "https://your-domain.com/callback/laos/umoney"
+      redirect_url: "https://your-domain.com/redirect/laos/umoney"
+      test_mode: false
+    
+    laos_ldb:
+      merchant_id: "your_merchant_id"
+      merchant_secret: "your_merchant_secret"
+      api_endpoint: "https://api.ldb.la"
+      callback_url: "https://your-domain.com/callback/laos/ldb"
+      redirect_url: "https://your-domain.com/redirect/laos/ldb"
+      test_mode: false
